@@ -1,0 +1,5 @@
+import { ActionUpdateSequencesDescription as description } from './description';
+
+export {
+	description
+};

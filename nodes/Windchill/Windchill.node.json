@@ -1,0 +1,18 @@
+{
+	"node": "n8n-nodes-base.windchill",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Development", "Developer Tools"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://windchill-public.github.io/docs/oauth/"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://cad.windchill.com/glassworks/explorer/"
+			}
+		]
+	}
+}

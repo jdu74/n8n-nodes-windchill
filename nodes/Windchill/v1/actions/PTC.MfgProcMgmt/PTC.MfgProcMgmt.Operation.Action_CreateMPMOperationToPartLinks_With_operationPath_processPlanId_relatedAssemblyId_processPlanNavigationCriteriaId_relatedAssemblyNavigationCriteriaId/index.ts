@@ -1,0 +1,5 @@
+import { PtcMfgProcMgmtOperationActionCreateMpmOperationToPartLinksWithOperationPathProcessPlanIdRelatedAssemblyIdProcessPlanNavigationCriteriaIdRelatedAssemblyNavigationCriteriaIdDescription as description } from './description';
+
+export {
+	description
+};
