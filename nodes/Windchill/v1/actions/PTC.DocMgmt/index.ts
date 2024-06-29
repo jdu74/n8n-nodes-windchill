@@ -108,10 +108,18 @@ export {
 
 export const descriptions: INodeProperties[] = [
 		{
-		displayName: 'BasePath',
+		displayName: 'basePath',
 		name: 'basePath',
-		default: '/Windchill/servlet/odata/v6/DocMgmt',
 		type: 'hidden',
+		noDataExpression: false,
+		displayOptions: {
+			show: {
+				resource: [
+					'PTC.DocMgmt',
+				],
+			},
+		},
+		default: '/Windchill/servlet/odata/v6/DocMgmt',
 	},
 		{
 		displayName: 'Operation',

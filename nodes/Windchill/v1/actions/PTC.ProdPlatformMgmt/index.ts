@@ -148,10 +148,18 @@ export {
 
 export const descriptions: INodeProperties[] = [
 		{
-		displayName: 'BasePath',
+		displayName: 'basePath',
 		name: 'basePath',
-		default: '/Windchill/servlet/odata/v4/ProdPlatformMgmt',
 		type: 'hidden',
+		noDataExpression: false,
+		displayOptions: {
+			show: {
+				resource: [
+					'PTC.ProdPlatformMgmt',
+				],
+			},
+		},
+		default: '/Windchill/servlet/odata/v4/ProdPlatformMgmt',
 	},
 		{
 		displayName: 'Operation',

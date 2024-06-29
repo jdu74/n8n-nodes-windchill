@@ -56,7 +56,7 @@ export async function execute(this: IExecuteFunctions): Promise<INodeExecutionDa
 	for (let i = 0; i < length; i++) {
 		try {
 			const iNodeRequest = parseParameters.call(this, i);
-			console.log('iNodeRequest', iNodeRequest)
+//			console.log('iNodeRequest', iNodeRequest)
 			Object.assign(iNodeRequest.headers, { Accept: 'application/json,text/html,application/xhtml+xml,application/xml,text/*;q=0.9, image/*;q=0.8, */*;q=0.7' })
 			const response = await apiRequest.call(
 				this,
@@ -140,7 +140,7 @@ export async function apiRequest(
 
 			const basicAuth = Buffer.from(`${credentials.user}:${credentials.password}`).toString('base64');
 			const endpoint = credentials.endpoint;
-			const optionsToken: OptionsWithUri = {
+			const optionsToken: any = {
 				headers: {
 					Authorization: `Basic ${basicAuth}`,
 					Accept: 'application/json'
@@ -150,6 +150,7 @@ export async function apiRequest(
 				uri: `${endpoint}/Windchill/servlet/odata/PTC/GetCSRFToken()`,
 				json: true,
 			};
+
 			const responseToken = await this.helpers.request!(optionsToken);
 
 			options.headers = { Accept: 'application/json' };
@@ -157,8 +158,8 @@ export async function apiRequest(
 			Object.assign(options.headers, { [responseToken.NonceKey]: responseToken.NonceValue });
 
 			options.uri = credentials.endpoint + resource
-			console.log('credentials', credentials)
-			console.log('options', options)
+//			console.log('credentials', credentials)
+//			console.log('options', options)
 			return await this.helpers.request!(options);
 		} else {
 			delete options.auth;

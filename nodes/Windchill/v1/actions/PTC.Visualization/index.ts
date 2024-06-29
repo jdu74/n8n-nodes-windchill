@@ -22,10 +22,18 @@ export {
 
 export const descriptions: INodeProperties[] = [
 		{
-		displayName: 'BasePath',
+		displayName: 'basePath',
 		name: 'basePath',
-		default: '/Windchill/servlet/odata/v3/Visualization',
 		type: 'hidden',
+		noDataExpression: false,
+		displayOptions: {
+			show: {
+				resource: [
+					'PTC.Visualization',
+				],
+			},
+		},
+		default: '/Windchill/servlet/odata/v3/Visualization',
 	},
 		{
 		displayName: 'Operation',

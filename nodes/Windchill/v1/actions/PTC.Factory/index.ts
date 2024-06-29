@@ -256,10 +256,18 @@ export {
 
 export const descriptions: INodeProperties[] = [
 		{
-		displayName: 'BasePath',
+		displayName: 'basePath',
 		name: 'basePath',
-		default: '/Windchill/servlet/odata/v5/Factory',
 		type: 'hidden',
+		noDataExpression: false,
+		displayOptions: {
+			show: {
+				resource: [
+					'PTC.Factory',
+				],
+			},
+		},
+		default: '/Windchill/servlet/odata/v5/Factory',
 	},
 		{
 		displayName: 'Operation',

@@ -1432,10 +1432,18 @@ export {
 
 export const descriptions: INodeProperties[] = [
 		{
-		displayName: 'BasePath',
+		displayName: 'basePath',
 		name: 'basePath',
-		default: '/Windchill/servlet/odata/v6/MfgProcMgmt',
 		type: 'hidden',
+		noDataExpression: false,
+		displayOptions: {
+			show: {
+				resource: [
+					'PTC.MfgProcMgmt',
+				],
+			},
+		},
+		default: '/Windchill/servlet/odata/v6/MfgProcMgmt',
 	},
 		{
 		displayName: 'Operation',

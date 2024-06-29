@@ -102,10 +102,18 @@ export {
 
 export const descriptions: INodeProperties[] = [
 		{
-		displayName: 'BasePath',
+		displayName: 'basePath',
 		name: 'basePath',
-		default: '/Windchill/servlet/odata/v4/CADDocumentMgmt',
 		type: 'hidden',
+		noDataExpression: false,
+		displayOptions: {
+			show: {
+				resource: [
+					'PTC.CADDocumentMgmt',
+				],
+			},
+		},
+		default: '/Windchill/servlet/odata/v4/CADDocumentMgmt',
 	},
 		{
 		displayName: 'Operation',
